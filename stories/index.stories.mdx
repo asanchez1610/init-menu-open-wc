@@ -1,0 +1,69 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+
+import '../header-component.js';
+
+<Meta
+  title="HeaderComponent"
+  parameters={{
+    component: "header-component",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# HeaderComponent
+
+A component for...
+
+## Features:
+
+- a
+- b
+- ...
+
+## How to use
+
+### Installation
+
+```bash
+yarn add header-component
+```
+
+```js
+import 'header-component/header-component.js';
+```
+
+<Preview withToolbar>
+  <Story name="Basic">
+    {html`
+      <header-component title = "Logo name" pathInit = "javascript:;" ></header-component>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="header-component" />
+
+## Variations
+
+###### Custom Title
+
+<Story name="Titulo personalizado">
+  {html`
+    <header-component title = "Titulo aplicacion" pathInit = "javascript:;" ></header-component>
+  `}
+</Story>
+
+###### Custom Options
+
+<Story name="Menu de opciones">
+  {html`
+    <header-component pathInit = "javascript:;" title = "My Web App" .options = ${[
+                                                          {name:'Page A' , path: 'javascript:;'},
+                                                          {name:'Page B' , path: 'javascript:;'},
+                                                          {name:'Page C' , path: 'javascript:;'}
+                                                          ]} ></header-component>
+  `}
+</Story>
+
+

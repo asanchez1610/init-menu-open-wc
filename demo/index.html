@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit-html';
+    import '../header-component.js';
+
+    const title = 'My Web App';
+    const options = [
+      {
+        name:'Home',
+        path: '#home'
+      },
+      {
+        name:'News',
+        path: '#news'
+      },
+      {
+        name:'About',
+        path: '#about'
+      },
+      {
+        name:'Contact',
+        path: '#contact'
+      }
+
+    ];
+    render(
+      html`
+        <header-component .title=${title} .options = ${options} ></header-component>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
